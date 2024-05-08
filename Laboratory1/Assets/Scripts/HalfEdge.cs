@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -32,18 +31,14 @@ namespace HalfEdge
         public Vector3 position;
         public HalfEdge outgoingEdge;
 
-        public Vertex(int index, Vector3 pos) : this(index, pos, null)
-        {
-        }
-
-        public Vertex(int index, Vector3 pos, HalfEdge outgoingEdge)
+        public Vertex(int index, Vector3 position, HalfEdge outgoingEdge = null)
         {
             this.index = index;
-            position = pos;
+            this.position = position;
             this.outgoingEdge = outgoingEdge;
         }
 
-        public List<HalfEdge> GetAdjacentEdges(List<HalfEdge> edges)
+        private List<HalfEdge> GetAdjacentEdges(List<HalfEdge> edges)
         {
             var adjacentEdges = new List<HalfEdge>();
 
@@ -57,35 +52,6 @@ namespace HalfEdge
 
             return adjacentEdges;
         }
-
-        public List<HalfEdge> GetIncidentEdges(List<HalfEdge> edges)
-        {
-            var incidentEdges = new List<HalfEdge>();
-
-            foreach (var edge in edges)
-                if (edge.nextEdge.sourceVertex == this && outgoingEdge != edge)
-                    if (!incidentEdges.Contains(edge))
-                        incidentEdges.Add(edge);
-            return incidentEdges;
-        }
-
-        public List<Face> GetAdjacentFaces(List<HalfEdge> edges)
-        {
-            var adjacentFaces = new Dictionary<int, Face>();
-
-            var adjacentEdges = GetAdjacentEdges(edges);
-
-            for (var i = 0; i < adjacentEdges.Count; i += 2)
-            {
-                var edge = adjacentEdges[i];
-                var twinEdge = adjacentEdges[i + 1];
-                adjacentFaces.TryAdd(edge.face.index, edge.face);
-
-                if (twinEdge != null) adjacentFaces.TryAdd(twinEdge.face.index, twinEdge.face);
-            }
-
-            return adjacentFaces.Values.ToList();
-        }
     }
 
     public class Face
@@ -96,54 +62,6 @@ namespace HalfEdge
         public Face(int index)
         {
             this.index = index;
-        }
-
-        public Face(int index, HalfEdge edge)
-        {
-            this.index = index;
-            this.edge = edge;
-        }
-
-        public void GetEdgesVertices(out List<Vertex> faceVertices, out List<HalfEdge> faceEdges)
-        {
-            faceVertices = new List<Vertex>();
-            faceEdges = new List<HalfEdge>();
-
-            var halfEdge = edge;
-            do
-            {
-                faceVertices.Add(halfEdge.sourceVertex);
-                faceEdges.Add(halfEdge);
-                halfEdge = halfEdge.nextEdge;
-            } while (edge != halfEdge);
-        }
-
-        public List<Vertex> GetVertices()
-        {
-            var faceVertices = new List<Vertex>();
-
-            var halfEdge = edge;
-            do
-            {
-                faceVertices.Add(halfEdge.sourceVertex);
-                halfEdge = halfEdge.nextEdge;
-            } while (edge != halfEdge);
-
-            return faceVertices;
-        }
-
-        public List<HalfEdge> GetEdges()
-        {
-            var faceEdges = new List<HalfEdge>();
-
-            var halfEdge = edge;
-            do
-            {
-                faceEdges.Add(halfEdge);
-                halfEdge = halfEdge.nextEdge;
-            } while (edge != halfEdge);
-
-            return faceEdges;
         }
     }
 
@@ -323,8 +241,8 @@ namespace HalfEdge
             if (drawVertices)
                 for (var i = 0; i < vertices.Count; i++)
                 {
-                    var worldPos = transform.TransformPoint(vertices[i].position);
-                    Handles.Label(worldPos, i.ToString(), style);
+                    var worldPosition = transform.TransformPoint(vertices[i].position);
+                    Handles.Label(worldPosition, i.ToString(), style);
                 }
 
             style.normal.textColor = Color.black;

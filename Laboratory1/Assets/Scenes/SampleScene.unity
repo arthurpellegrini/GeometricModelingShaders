@@ -284,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353301495}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -295,7 +295,7 @@ Transform:
   - {fileID: 1255107501}
   - {fileID: 1608893886}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,11 +502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67790f49e9a478a9e978b8df8b73c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDisplayMeshInfo: 1
-  mDisplayMeshEdges: 1
-  mDisplayMeshVertices: 1
-  mDisplayMeshFaces: 1
-  mSelectedShapes: 2
+  showQuadGizmos: 1
+  showXxxEdgeGizmos: 0
+  selectedShape: 2
 --- !u!33 &452899572
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -515,55 +513,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452899568}
   m_Mesh: {fileID: 0}
---- !u!1 &832575517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 832575519}
-  - component: {fileID: 832575518}
-  m_Layer: 0
-  m_Name: Global Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &832575518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832575517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
---- !u!4 &832575519
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832575517}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255107500
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,11 +601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67790f49e9a478a9e978b8df8b73c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDisplayMeshInfo: 1
-  mDisplayMeshEdges: 1
-  mDisplayMeshVertices: 1
-  mDisplayMeshFaces: 1
-  mSelectedShapes: 3
+  showQuadGizmos: 1
+  showXxxEdgeGizmos: 0
+  selectedShape: 3
 --- !u!33 &1255107504
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -696,11 +643,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67790f49e9a478a9e978b8df8b73c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDisplayMeshInfo: 1
-  mDisplayMeshEdges: 1
-  mDisplayMeshVertices: 1
-  mDisplayMeshFaces: 1
-  mSelectedShapes: 0
+  showQuadGizmos: 1
+  showXxxEdgeGizmos: 0
+  selectedShape: 0
 --- !u!33 &1303420960
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -854,11 +799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67790f49e9a478a9e978b8df8b73c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDisplayMeshInfo: 1
-  mDisplayMeshEdges: 1
-  mDisplayMeshVertices: 1
-  mDisplayMeshFaces: 1
-  mSelectedShapes: 4
+  showQuadGizmos: 1
+  showXxxEdgeGizmos: 0
+  selectedShape: 4
 --- !u!33 &1608893889
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -955,11 +898,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67790f49e9a478a9e978b8df8b73c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDisplayMeshInfo: 1
-  mDisplayMeshEdges: 1
-  mDisplayMeshVertices: 1
-  mDisplayMeshFaces: 1
-  mSelectedShapes: 1
+  showQuadGizmos: 1
+  showXxxEdgeGizmos: 0
+  selectedShape: 1
 --- !u!33 &2022538007
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -974,5 +915,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 330585546}
   - {fileID: 410087041}
-  - {fileID: 832575519}
   - {fileID: 353301496}

@@ -191,7 +191,7 @@ namespace WingedEdge
         }
 
 
-        public string ConvertToCsvFormat(string separator = "\t")
+        public string ConvertToCsvFormat(string separator = ",")
         {
             var tabSize = Mathf.Max(edges.Count, faces.Count, vertices.Count);
 
@@ -201,12 +201,12 @@ namespace WingedEdge
             {
                 var we = edges[i];
                 strings[i] += we.index + separator;
-                strings[i] += we.startVertex.index + ", " + we.endVertex.index + separator;
+                strings[i] += we.startVertex.index + separator + we.endVertex.index + separator;
 
                 if (we.startCWEdge != null)
-                    strings[i] += we.startCWEdge.index + ", ";
+                    strings[i] += we.startCWEdge.index + separator;
                 else
-                    strings[i] += "null, ";
+                    strings[i] += "null" + separator;
 
                 if (we.endCWEdge != null)
                     strings[i] += we.endCWEdge.index;
@@ -220,7 +220,7 @@ namespace WingedEdge
                 else
                     strings[i] += "null";
 
-                strings[i] += ", ";
+                strings[i] += separator;
 
                 if (we.endCCWEdge != null)
                     strings[i] += we.endCCWEdge.index;
