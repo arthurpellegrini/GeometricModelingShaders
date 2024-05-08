@@ -150,7 +150,7 @@ Shader "Examples/Waves"
             ENDHLSL
         }
 
-		/*
+		
 		Pass
         {
             Name "DepthOnly"
@@ -170,7 +170,7 @@ Shader "Examples/Waves"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/DepthOnlyPass.hlsl"
             ENDHLSL
         }
-		*/
+		
     }
 	Fallback Off
 }
