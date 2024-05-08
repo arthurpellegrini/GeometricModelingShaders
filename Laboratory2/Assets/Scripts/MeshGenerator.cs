@@ -19,6 +19,7 @@ public class MeshGenerator : MonoBehaviour
 {
     [SerializeField] private bool showQuadGizmos = true;
     [SerializeField] private bool showXxxEdgeGizmos = true;
+    [SerializeField] private int nbSubdivisions = 0;
     [SerializeField] private Shape selectedShape = Shape.Box;
 
     private MeshFilter _meshFilter;
@@ -43,6 +44,7 @@ public class MeshGenerator : MonoBehaviour
         _halfEdgeMesh = new HalfEdgeMesh(_meshFilter.mesh);
         _wingedEdgeMesh = new WingedEdgeMesh(_meshFilter.mesh);
         
+        _halfEdgeMesh.SubdivideCatmullClark(nbSubdivisions);
         _meshFilter.mesh = _halfEdgeMesh.ConvertToFaceVertexMesh();
         // _meshFilter.mesh = _wingedEdgeMesh.ConvertToFaceVertexMesh();
         
