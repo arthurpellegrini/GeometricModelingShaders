@@ -21,7 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ButterflyFlying
-  m_Shader: {fileID: -6465566751694194690, guid: 9243ab3e18e0f4632a0dc4eee162761b, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9243ab3e18e0f4632a0dc4eee162761b,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
