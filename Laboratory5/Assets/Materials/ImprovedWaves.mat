@@ -116,9 +116,9 @@ Material:
     - _Color: {r: 0.4198113, g: 0.839106, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WaveA: {r: 1.34, g: 1.39, b: 0.5, a: 10}
-    - _WaveB: {r: 1.92, g: 2.51, b: 0.25, a: 20}
-    - _WaveC: {r: 62.73, g: 1, b: 0.15, a: 10}
+    - _WaveA: {r: 1, g: 0, b: 0.5, a: 10}
+    - _WaveB: {r: 0, g: 1, b: 0.25, a: 20}
+    - _WaveC: {r: 1, g: 1, b: 0.15, a: 10}
   m_BuildTextureStacks: []
 --- !u!114 &4387011377717553705
 MonoBehaviour:
