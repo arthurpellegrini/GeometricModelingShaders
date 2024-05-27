@@ -7,56 +7,75 @@ This GitHub repository contains the code for the laboratories carried out as par
 ## Laboratories
 
 Lab 1 : Procedural generation of three-dimensional geometric entities
+
 ![Procedural generation of three-dimensional geometric entities (Quadrilaterals or Quads)](./Figures/lab1.jpg)
 
 Lab 2 : Catmull-Clark subdivision algorithm
+
 ![Catmull-Clark subdivision algorithm](./Figures/lab2.jpg)
 
 Lab 3-a : Wave Tesselation
+
 ![Wave Tesselation](./Figures/lab3a_wave_shader.jpg)
 
 Lab 3-b : Level of Detail Tesselation
+
 ![Level of Detail Tesselation](./Figures/lab3b_lod.png)
 
 Lab 3-c : Working on new shader
+
 ![Working on new shader](./Figures/lab3c-normal_debug_shader.png)
 
 Lab 3-d : Procedural grass and grass blade shader
+
 ![Procedural grass and grass blade shader](./Figures/lab3d_grass_shader.png)
 
 Lab 4 : Moving Calculations in shader
+
 [Watch Video](https://youtu.be/XpP3Ws0bVSU)
 
 Lab 5-a : Animating fishes and butterflies
+
 [Watch Video](https://youtu.be/Ll-AmPCW_dE)
 
 Lab 5-b : Creating waves with vertex displacement
+
 ![Creating waves with vertex displacement](./Figures/lab5b_base.png)
+
 [Watch Video](https://youtu.be/wGiH_wfXyTA)
 
 Lab 5-c : Blob-like deformation shader
+
 ![Blob-like deformation shader](./Figures/lab5c.png)
 
 Lab 5-d : Interactive map
+
 ![Interactive map](./Figures/lab5d.png)
 
 Lab 5-e : Cyanilux's melting candle
+
 [Watch Video](https://youtu.be/DNzvVhMdoJw)
 
 Lab 6-a : URP geometry shader for grass (Zelda)
+
 [Watch Video](https://youtu.be/F1Cl8Pdmh-0)
 
 Lab 6-b : Geometry shader in URP
+
 [Watch Video](https://youtu.be/PUioNGx8Z-Q)
 
 Lab 6-c : Advanced rendering - flat and wireframe shading
+
 ![Advanced Rendering - Flat and Wireframe Shading](./Figures/lab6c.png)
 
 Lab 6-d : Wireframe shader graph
+
 ![Wireframe Shader Graph](./Figures/lab6d_wireframe.png)
+
 ![Wireframe Alpha Shader Graph](./Figures/lab6d_alphawireframe.png)
 
 Lab 6-e : Wireframe URP shader with primitive 3D spaceship
+
 ![Wireframe URP shader with primitive 3D spaceship](./Figures/lab6e.png)
 
 ## Sea Project
